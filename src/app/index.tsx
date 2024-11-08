@@ -1,10 +1,20 @@
+import { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-
+import {
+  AnimatedFAB,
+  DataTable,
+  PaperProvider,
+  Searchbar,
+} from "react-native-paper";
+import { SafeAreaView } from "react-native-safe-area-context";
 export default function Home() {
   return (
-    <View style={styles.container}>
-      <Text>Hello Home</Text>
-    </View>
+    <PaperProvider>
+      <View style={styles.container}>
+        <Text>Hello Home</Text>
+        <Text>Intergration react-native-paper</Text>
+      </View>
+    </PaperProvider>
   );
 }
 
