@@ -18,7 +18,13 @@ export const ListHeader = () => {
           horizontal
           renderItem={({ item }) => (
             <Link href={`/priority/${item}`}>
-              <Button mode="outlined">{item}</Button>
+              <Button
+                mode="outlined"
+                labelStyle={{ fontWeight: "bold" }}
+                textColor="black"
+              >
+                {item}
+              </Button>
             </Link>
           )}
           contentContainerStyle={{
