@@ -20,7 +20,7 @@ export default function RootLayout() {
           />
           <Stack.Screen
             name="priority"
-            options={{ headerShown: true, title: "Priority" }}
+            options={{ headerShown: false, title: "Priority" }}
           />
           <Stack.Screen
             name="add-task"

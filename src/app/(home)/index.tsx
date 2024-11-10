@@ -4,6 +4,8 @@ import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 import { Button } from "react-native-paper";
 import { getAllTasks, storeTasksList, Task } from "../../store/task";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { ListHeader } from "../../components/list-header";
+import { TaskListItem } from "../../components/task-list-item";
 export default function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
   useEffect(() => {
@@ -21,16 +23,9 @@ export default function Home() {
       <FlatList
         data={tasks}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <View>
-            <Text>{item.title}</Text>
-            <Link href={`/task/${item.id}`}>Open Task</Link>
-          </View>
-        )}
+        renderItem={({ item }) => <TaskListItem task={item} />}
+        ListHeaderComponent={ListHeader}
       />
-      <Link href="/404">
-        <Text>404</Text>
-      </Link>
     </SafeAreaView>
   );
 }
@@ -38,8 +33,7 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    paddingHorizontal: 10,
+    backgroundColor: "white",
   },
 });
