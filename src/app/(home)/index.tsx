@@ -28,6 +28,9 @@ export default function Home() {
           </View>
         )}
       />
+      <Link href="/404">
+        <Text>404</Text>
+      </Link>
     </SafeAreaView>
   );
 }
