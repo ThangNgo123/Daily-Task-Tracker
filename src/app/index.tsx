@@ -1,20 +1,16 @@
-import { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import {
-  AnimatedFAB,
-  DataTable,
-  PaperProvider,
-  Searchbar,
-} from "react-native-paper";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { PaperProvider } from "react-native-paper";
+import { ToastProvider } from "react-native-toast-notifications";
 export default function Home() {
   return (
-    <PaperProvider>
-      <View style={styles.container}>
-        <Text>Hello Home</Text>
-        <Text>Intergration react-native-paper</Text>
-      </View>
-    </PaperProvider>
+    <ToastProvider>
+      <PaperProvider>
+        <View style={styles.container}>
+          <Text>Hello Home</Text>
+          <Text>Intergration react-native-paper</Text>
+        </View>
+      </PaperProvider>
+    </ToastProvider>
   );
 }
 
