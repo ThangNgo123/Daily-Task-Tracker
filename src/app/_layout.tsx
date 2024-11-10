@@ -18,6 +18,14 @@ export default function RootLayout() {
               title: "Task",
             }}
           />
+          <Stack.Screen
+            name="priority"
+            options={{ headerShown: false, title: "Priority" }}
+          />
+          <Stack.Screen
+            name="add-task"
+            options={{ presentation: "modal", title: "Add Task" }}
+          />
         </Stack>
       </PaperProvider>
     </ToastProvider>
