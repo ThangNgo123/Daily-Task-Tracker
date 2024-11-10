@@ -13,7 +13,6 @@ export const ListHeader = () => {
         <Text style={{ fontWeight: "bold", fontSize: 26 }}>Task List</Text>
       </View>
       <View>
-        <Text style={{ fontWeight: "bold", fontSize: 16 }}>Prioritys</Text>
         <FlatList
           data={prioritys}
           horizontal
